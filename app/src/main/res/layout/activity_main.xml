@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/spotify_black_dark"
     tools:context=".MainActivity">
 
     <TextView
@@ -14,6 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Log in to continue."
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,6 +30,9 @@
         android:inputType="text"
         android:layout_marginTop="20dp"
         android:hint="Email or username"
+        android:background="@color/spotify_black_light"
+        android:textColor="@color/white"
+        android:textColorHint="@color/spotify_gray_light"
         app:layout_constraintTop_toBottomOf="@id/loginText"
         app:layout_constraintStart_toStartOf="@id/loginText"
         app:layout_constraintEnd_toEndOf="@id/loginText"
@@ -40,11 +45,40 @@
         android:layout_height="50dp"
         android:ems="10"
         android:inputType="textPassword"
+        android:layout_marginTop="20dp"
         android:hint="Password"
+        android:background="@color/spotify_black_light"
+        android:textColor="@color/white"
+        android:textColorHint="@color/spotify_gray_light"
         app:layout_constraintTop_toBottomOf="@id/username"
         app:layout_constraintStart_toStartOf="@id/username"
         app:layout_constraintEnd_toEndOf="@id/username"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="273dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:text="Log In"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        app:layout_constraintStart_toStartOf="@id/password"
+        app:layout_constraintEnd_toEndOf="@id/password"
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="333dp" />
+
+    <ImageView
+        android:id="@+id/spotifyLogo"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        app:srcCompat="@drawable/spotify_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/loginText"
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="6dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
